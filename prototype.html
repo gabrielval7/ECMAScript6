@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+    <script type="text/babel">
+       
+      let a1 = {
+         cor: 'Azul',
+         modelo: 'Airbus a300',
+
+         levantarVoo: function(){
+            document.write("O AVIÂO ESTÀ VOANDO")
+         }
+      }
+
+      let AviaoFactory = function(){
+         this.cor = 'branco',
+         this.modelo = 'Boeing a300',
+         this.levantarVoo = function(){
+            document.write("O AVIÂO ESTÀ VOANDO")
+         }
+      }
+
+      let a2 = new AviaoFactory()
+
+      console.log(a1)
+      console.log(a2)
+
+      Object.prototype.atrib4 = 'Herdou de Object'
+
+      let animal = { atrib1: 'Herdou animal com o proto'}
+      let vertebrado = { __proto__: animal, atrib2: 'Herdou vertebrado com o proto'}
+      let ave = { __proto__: vertebrado, atrib3: 'c'}
+      console.log(ave.atrib2, ave.atrib1, ave.atrib4)
+      
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

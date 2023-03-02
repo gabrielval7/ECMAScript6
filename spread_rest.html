@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+    <script type="text/babel">
+       
+      //Spead = Espalhar e Rest = Juntar
+
+//Spread    
+      let tituloArtigo = 'Como utilizar o operador spread'
+      console.log(tituloArtigo)
+      console.log(...tituloArtigo)
+      console.log([...tituloArtigo]) //colocando cada letra da string em um indice de um array
+
+      //arrays
+
+      let listaCursos1 = ['Node.js e mongo', 'ES6, Java, CSS']
+      let listaCursos2 = ['Programação mobile', 'Linux']
+      let ListaCursosCompleto = ['HTML', ...listaCursos1, ...listaCursos2]
+
+      console.log(ListaCursosCompleto)
+
+      //Objetos
+
+      let pessoa = {
+         nome: 'Joao',
+         idade: 20
+      }
+      let clone = {
+         endereço: 'Rua da galera',
+         ...pessoa
+      }
+
+      console.log(clone)
+
+//Rest
+
+      function soma(...param){
+         let resultado = 0
+         param.forEach(valor => resultado += valor)
+         return resultado
+      }
+
+      console.log(soma(3, 9, 6, 7))
+      console.log(soma(3, 9, 6, 7, 4, 6))
+      
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
